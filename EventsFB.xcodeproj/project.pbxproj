@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		472442452951DA9400586BC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472442442951DA9400586BC8 /* AppDelegate.swift */; };
+		472442472951DACC00586BC8 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472442462951DACC00586BC8 /* EventsViewModel.swift */; };
 		6F1B821E29518D72005849D0 /* EventsFBApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B821D29518D72005849D0 /* EventsFBApp.swift */; };
 		6F1B822029518D72005849D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B821F29518D72005849D0 /* ContentView.swift */; };
 		6F1B822229518D73005849D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F1B822129518D73005849D0 /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		472442442951DA9400586BC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		472442462951DACC00586BC8 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		6F1B821A29518D72005849D0 /* EventsFB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsFB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F1B821D29518D72005849D0 /* EventsFBApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsFBApp.swift; sourceTree = "<group>"; };
 		6F1B821F29518D72005849D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,7 +108,9 @@
 			children = (
 				6F1B824F2951910D005849D0 /* Info.plist */,
 				6F1B821D29518D72005849D0 /* EventsFBApp.swift */,
+				472442442951DA9400586BC8 /* AppDelegate.swift */,
 				6F1B821F29518D72005849D0 /* ContentView.swift */,
+				472442462951DACC00586BC8 /* EventsViewModel.swift */,
 				6F1B822129518D73005849D0 /* Assets.xcassets */,
 				6F1B822329518D73005849D0 /* EventsFB.entitlements */,
 				6F1B822429518D73005849D0 /* Preview Content */,
@@ -275,6 +281,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				472442472951DACC00586BC8 /* EventsViewModel.swift in Sources */,
+				472442452951DA9400586BC8 /* AppDelegate.swift in Sources */,
 				6F1B822029518D72005849D0 /* ContentView.swift in Sources */,
 				6F1B821E29518D72005849D0 /* EventsFBApp.swift in Sources */,
 			);

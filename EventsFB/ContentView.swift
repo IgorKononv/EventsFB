@@ -21,33 +21,21 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct Home : View {
-    
+    @ObservedObject var viewModel = EventsViewModel()
     @AppStorage("logged") var logged = false
-    @AppStorage("email") var email = "your email"
     @State var manager = LoginManager()
-
+    
     var body: some View {
         VStack {
-            
             Button {
                 if logged {
                     manager.logOut()
-                    email = ""
                     logged = false
                 } else {
-                    manager.logIn(permissions: ["public_profile", "email"], from: nil) { (result, err) in
-                        
-                        if err != nil {
-                            print(err!.localizedDescription)
-                            return
-                        }
+                    manager.logIn(permissions: ["public_profile", "email"], from: nil) { (result, error) in
+                        guard let result = result else { return }
+                        viewModel.getUserData()
                         logged = true
-                        let request = GraphRequest(graphPath: "me", parameters: ["fields": "email"])
-                        request.start { (_, res, _) in
-                            guard let profileData = res as? [String: Any] else { return }
-                            
-                            email = profileData["email"] as? String ?? "email"
-                        }
                     }
                 }
             } label: {
@@ -57,10 +45,6 @@ struct Home : View {
                     .fontWeight(.bold)
                     .padding(.bottom, 50)
             }
-            Text(email)
-                .fontWeight(.bold)
-                .font(.title3)
-
         }
     }
 }
